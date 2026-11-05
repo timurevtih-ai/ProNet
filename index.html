@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="darkreader-lock">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#060a12">
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+  <title>ProNet — высокоскоростной интернет и интерактивное телевидение</title>
+  <meta name="description" content="ProNet — безлимитный высокоскоростной интернет до 300 Мбит/с и интерактивное телевидение от 200 каналов. Оптоволокно и GPON для квартир, частных домов и бизнеса. 19 лет на рынке.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__flash"></div>
+    <div class="loader__logo" data-logo></div>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" data-logo aria-label="ProNet — на главную"></a>
+
+    <nav class="nav__menu" id="navMenu" aria-label="Основное меню">
+      <a href="#services">Услуги</a>
+      <a href="#tariffs">Тарифы</a>
+      <a href="#tech">Технологии</a>
+      <a href="#business">Бизнесу</a>
+      <a href="#pay">Оплата</a>
+      <a href="#contacts">Контакты</a>
+      <div class="nav__menu-foot">
+        <a href="#" data-cfg-href="cabinetUrl" target="_blank" rel="noopener">Мой кабинет ↗</a>
+        <a href="tel:88612100700">8 861 2-100-700</a>
+      </div>
+    </nav>
+
+    <div class="nav__right">
+      <a class="nav__phone" href="tel:88612100700">8 861 2-100-700</a>
+      <a class="nav__cab" href="#" data-cfg-href="cabinetUrl" target="_blank" rel="noopener">Мой кабинет</a>
+      <a class="btn btn--primary btn--sm" href="#order"><span class="btn__t">Подключиться</span></a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__static" aria-hidden="true"></div>
+      <div class="globe-hint" id="globeHint" aria-hidden="true"><span><svg viewBox="0 0 20 20"><path d="M3.5 10a6.5 6.5 0 0 1 11.6-4M16.5 10a6.5 6.5 0 0 1-11.6 4"/><path d="M15.4 2.6v3.6h-3.6M4.6 17.4v-3.6h3.6"/></svg><em>Потяните, чтобы покрутить</em></span></div>
+      <div class="globe-label" id="globeLabel" aria-hidden="true"><i></i><span><b>ProNet</b> · Яблоновский</span></div>
+
+      <div class="container hero__inner" id="heroInner">
+        <p class="kicker intro" style="--d:.1s"><i></i>19 лет на рынке телекоммуникаций</p>
+        <h1 class="hero__title split">Интернет <span class="accent">без компромиссов</span></h1>
+        <div class="hero__row">
+          <p class="hero__lead intro" style="--d:1.05s">Безлимитный высокоскоростной интернет до&nbsp;300&nbsp;Мбит/с и&nbsp;интерактивное телевидение от&nbsp;200&nbsp;каналов. Оптоволокно и&nbsp;GPON для&nbsp;квартир и&nbsp;частных домов.</p>
+          <div class="hero__cta intro" style="--d:1.2s">
+            <a href="#order" class="btn btn--primary magnetic"><span class="btn__t">Подключиться</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+            <a href="#tariffs" class="btn btn--ghost magnetic"><span class="btn__t">Тарифы</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero__stats">
+        <div class="stat intro" style="--d:1.35s"><b data-count="19">19</b><span>лет на&nbsp;рынке телекоммуникаций</span></div>
+        <div class="stat intro" style="--d:1.45s"><b><span data-count="6000">6&nbsp;000</span>+</b><span>домов подключено</span></div>
+        <div class="stat intro" style="--d:1.55s"><b><span data-count="7700">7&nbsp;700</span>+</b><span>квартир подключено</span></div>
+        <a href="#about" class="hero__scroll intro" style="--d:1.7s"><span>Листайте</span><i></i></a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section light light--top" id="about">
+      <div class="container">
+        <p class="sec-label reveal"><span>01</span>О компании</p>
+        <p class="statement" id="statement">PRONET&nbsp;— телекоммуникационная компания, которая с&nbsp;2007&nbsp;года строит сеть, на&nbsp;которую можно положиться: для&nbsp;дома, семьи и&nbsp;бизнеса.</p>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline__line"><i></i></div>
+          <article class="tl reveal">
+            <span class="tl__year">2007</span>
+            <h3>Начало пути</h3>
+            <p>Одними из&nbsp;первых в&nbsp;Адыгее начали внедрять беспроводной доступ в&nbsp;интернет.</p>
+          </article>
+          <article class="tl reveal">
+            <span class="tl__year">2008</span>
+            <h3>Своя оптика</h3>
+            <p>Начали строительство оптоволоконных линий связи в&nbsp;пгт Яблоновском.</p>
+          </article>
+          <article class="tl reveal">
+            <span class="tl__year">2015</span>
+            <h3>Технология GPON</h3>
+            <p>Внедрили подключение по&nbsp;GPON и&nbsp;уверенно расширили масштабы присутствия.</p>
+          </article>
+          <article class="tl reveal">
+            <span class="tl__year">Сегодня</span>
+            <h3>13&nbsp;700+ подключений</h3>
+            <p>Более 6000&nbsp;домов и&nbsp;7700&nbsp;квартир: интернет, ТВ, видеонаблюдение и&nbsp;умный домофон.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section section--tint light" id="services">
+      <div class="container">
+        <div class="head">
+          <div>
+            <p class="sec-label reveal"><span>02</span>Услуги</p>
+            <h2 class="h2 split">Всё для&nbsp;дома <span class="accent">и&nbsp;бизнеса</span></h2>
+          </div>
+          <p class="lead reveal">Один провайдер для&nbsp;интернета, телевидения и&nbsp;безопасности&nbsp;— с&nbsp;собственной сетью и&nbsp;службой поддержки.</p>
+        </div>
+
+        <div class="bento">
+          <a class="svc svc--lg spot reveal" href="#tariffs" data-kind="net">
+            <span class="svc__icon"><svg viewBox="0 0 24 24"><path d="M3.5 15.5a8.5 8.5 0 0 1 17 0"/><path d="M12 15.5l4.5-5.5"/><circle cx="12" cy="15.5" r="1.3"/></svg></span>
+            <span class="svc__tag">Интернет</span>
+            <h3>Высокоскоростной и&nbsp;безлимитный</h3>
+            <p>До&nbsp;300&nbsp;Мбит/с по&nbsp;оптоволокну и&nbsp;GPON. Без&nbsp;ограничений трафика, с&nbsp;фиксированной абонентской платой.</p>
+            <span class="svc__big" aria-hidden="true">300</span>
+            <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M6 14 14 6M7 6h7v7"/></svg></span>
+          </a>
+          <a class="svc spot reveal" href="#tariffs" data-kind="combo">
+            <span class="svc__icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M9 20h6M12 17v3"/></svg></span>
+            <span class="svc__tag">Интерактивное ТВ</span>
+            <h3>Ваш телевизор может больше</h3>
+            <p>«Смотрёшка» и&nbsp;«24часаТВ»&nbsp;— от&nbsp;200 до&nbsp;300+ каналов.</p>
+            <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M6 14 14 6M7 6h7v7"/></svg></span>
+          </a>
+          <a class="svc spot reveal" href="#order" data-service="Видеонаблюдение">
+            <span class="svc__icon"><svg viewBox="0 0 24 24"><path d="M3 8.5h11l4-3v13l-4-3H3z"/><circle cx="8.5" cy="12" r="2"/></svg></span>
+            <span class="svc__tag">Видеонаблюдение</span>
+            <h3>Контроль в&nbsp;ваших руках</h3>
+            <p>Облачное видеонаблюдение: подберём камеры и&nbsp;установим под&nbsp;ключ.</p>
+            <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M6 14 14 6M7 6h7v7"/></svg></span>
+          </a>
+          <a class="svc spot reveal" href="#order" data-service="Умный домофон">
+            <span class="svc__icon"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2.5"/><circle cx="12" cy="9" r="2.5"/><path d="M9.5 15h5M9.5 18h5"/></svg></span>
+            <span class="svc__tag">Умный домофон</span>
+            <h3>Комфорт и&nbsp;безопасность</h3>
+            <p>Новая услуга, которая делает жизнь в&nbsp;вашем доме удобнее.</p>
+            <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M6 14 14 6M7 6h7v7"/></svg></span>
+          </a>
+          <a class="svc spot reveal" href="#business">
+            <span class="svc__icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8.5 7V5a1.5 1.5 0 0 1 1.5-1.5h4A1.5 1.5 0 0 1 15.5 5v2M3 12.5h18"/></svg></span>
+            <span class="svc__tag">Для бизнеса</span>
+            <h3>От&nbsp;1 до&nbsp;1000&nbsp;Мбит/с</h3>
+            <p>Поддержка 24/7, статический IP, СКС и&nbsp;ТВ для&nbsp;бизнеса.</p>
+            <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M6 14 14 6M7 6h7v7"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TARIFFS ============ -->
+    <section class="section light" id="tariffs">
+      <div class="container">
+        <div class="head">
+          <div>
+            <p class="sec-label reveal"><span>03</span>Тарифы</p>
+            <h2 class="h2 split">Тарифы на&nbsp;интернет <span class="accent">и&nbsp;ТВ</span></h2>
+          </div>
+          <p class="lead reveal">Безлимитный трафик и&nbsp;фиксированная абонентская плата на&nbsp;всех тарифах.</p>
+        </div>
+
+        <div class="tf-bar reveal">
+          <div class="seg" id="segType" role="tablist" aria-label="Тип жилья">
+            <button type="button" role="tab" data-type="flat" class="is-on" aria-selected="true">Квартира</button>
+            <button type="button" role="tab" data-type="house" aria-selected="false">Частный дом</button>
+            <i class="seg__pill" aria-hidden="true"></i>
+          </div>
+          <div class="chips" id="segKind" role="group" aria-label="Состав тарифа">
+            <button type="button" data-kind="all" class="is-on">Все</button>
+            <button type="button" data-kind="combo">Интернет + ТВ</button>
+            <button type="button" data-kind="net">Интернет</button>
+          </div>
+        </div>
+
+        <div class="tf-connect reveal" id="tfConnect"></div>
+        <div class="tariffs" id="tariffGrid"></div>
+
+        <div class="extras reveal">
+          <h3>Дополнительные услуги</h3>
+          <div class="extras__list" id="extrasList"></div>
+        </div>
+        <p class="note reveal">Фиксированная абонентская плата. Техническую возможность подключения уточняйте у&nbsp;менеджера или&nbsp;в&nbsp;абонентском отделе.</p>
+      </div>
+    </section>
+
+    <!-- ============ PROMOS ============ -->
+    <section class="section section--tight light light--bottom" id="promo">
+      <div class="container">
+        <p class="sec-label reveal"><span>04</span>Акции</p>
+        <div class="promos">
+          <article class="promo spot reveal">
+            <svg class="promo__arcs" viewBox="0 0 60 60" aria-hidden="true"><path d="M8 30a22 22 0 0 1 44 0"/><path d="M16 36a14 14 0 0 1 28 0"/><path d="M24 42a6 6 0 0 1 12 0"/></svg>
+            <b>0&nbsp;₽</b>
+            <h3>Подключение квартиры</h3>
+            <p>В&nbsp;многоквартирных домах подключение бесплатное.</p>
+          </article>
+          <article class="promo spot reveal">
+            <svg class="promo__arcs" viewBox="0 0 60 60" aria-hidden="true"><path d="M8 30a22 22 0 0 1 44 0"/><path d="M16 36a14 14 0 0 1 28 0"/><path d="M24 42a6 6 0 0 1 12 0"/></svg>
+            <b>5&nbsp;000&nbsp;₽</b>
+            <h3>Частный дом для&nbsp;пенсионеров</h3>
+            <p>Вместо 8&nbsp;000&nbsp;₽&nbsp;— при&nbsp;предъявлении пенсионного удостоверения.</p>
+          </article>
+          <article class="promo spot reveal">
+            <svg class="promo__arcs" viewBox="0 0 60 60" aria-hidden="true"><path d="M8 30a22 22 0 0 1 44 0"/><path d="M16 36a14 14 0 0 1 28 0"/><path d="M24 42a6 6 0 0 1 12 0"/></svg>
+            <b>Призы</b>
+            <h3>Розыгрыш для&nbsp;абонентов</h3>
+            <p>Подключайте пакет услуг&nbsp;— получайте номер участника и&nbsp;участвуйте в&nbsp;розыгрыше.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECH ============ -->
+    <section class="section section--tint" id="tech">
+      <div class="container">
+        <div class="head">
+          <div>
+            <p class="sec-label reveal"><span>05</span>Технологии</p>
+            <h2 class="h2 split">Оптика до&nbsp;вашего <span class="accent">дома</span></h2>
+          </div>
+          <p class="lead reveal">С&nbsp;2008&nbsp;года строим собственные волоконно-оптические линии, с&nbsp;2015-го подключаем по&nbsp;технологии GPON. Проводное соединение не&nbsp;зависит от&nbsp;погоды.</p>
+        </div>
+
+        <div class="tech__stage reveal">
+          <canvas id="fiberCanvas" aria-hidden="true"></canvas>
+          <div class="tech__caption"><span>ВОЛС · GPON</span>Собственные линии связи ProNet</div>
+        </div>
+
+        <div class="specs">
+          <article class="spec spot reveal"><span class="spec__n">01</span><h3>Оптоволокно</h3><p>Собственные волоконно-оптические линии связи с&nbsp;2008&nbsp;года.</p></article>
+          <article class="spec spot reveal"><span class="spec__n">02</span><h3>GPON</h3><p>Современная технология оптического подключения с&nbsp;2015&nbsp;года.</p></article>
+          <article class="spec spot reveal"><span class="spec__n">03</span><h3>Стабильность</h3><p>Проводной интернет не&nbsp;зависит от&nbsp;погодных условий.</p></article>
+          <article class="spec spot reveal"><span class="spec__n">04</span><h3>Поддержка</h3><p>Без выходных с&nbsp;7:00 до&nbsp;1:00&nbsp;— <a class="u" href="tel:88612100800">8&nbsp;861&nbsp;2-100-800</a>.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPEED ============ -->
+    <section class="section" id="speed">
+      <div class="container">
+        <div class="head">
+          <div>
+            <p class="sec-label reveal"><span>06</span>Скорость</p>
+            <h2 class="h2 split">Сколько займёт <span class="accent">загрузка</span></h2>
+          </div>
+          <p class="lead reveal">Выберите скорость тарифа и&nbsp;посмотрите, как&nbsp;быстро скачаются фильмы, игры и&nbsp;фото.</p>
+        </div>
+        <div class="calc reveal">
+          <div class="calc__main">
+            <div class="calc__value"><b id="calcVal">100</b><span>Мбит/с</span></div>
+            <input type="range" class="range" id="calcRange" min="10" max="300" step="5" value="100" aria-label="Скорость тарифа, Мбит/с">
+            <div class="calc__marks" id="calcMarks"></div>
+          </div>
+          <div class="calc__list" id="calcList"></div>
+        </div>
+        <p class="note reveal">Расчёт для&nbsp;идеальных условий. Реальное время зависит от&nbsp;сервера и&nbsp;домашнего Wi‑Fi.</p>
+      </div>
+    </section>
+
+    <!-- ============ APP ============ -->
+    <section class="section light light--top light--bottom" id="app">
+      <div class="container app">
+        <div class="app__body">
+          <p class="sec-label reveal"><span>07</span>Приложение</p>
+          <h2 class="h2 split">Личный кабинет <span class="accent">в&nbsp;кармане</span></h2>
+          <p class="lead reveal">Управлять услугами и&nbsp;следить за&nbsp;балансом теперь ещё удобнее.</p>
+          <ul class="app__list">
+            <li class="reveal">Баланс, кредит, номер и&nbsp;статус лицевого счёта</li>
+            <li class="reveal">Пополнение счёта и&nbsp;обещанный платёж</li>
+            <li class="reveal">Новости провайдера и&nbsp;история обращений</li>
+            <li class="reveal">Push-уведомления о&nbsp;важном</li>
+          </ul>
+          <div class="app__cta reveal">
+            <a class="btn btn--primary magnetic" href="#" data-cfg-href="appAndroid" target="_blank" rel="noopener"><span class="btn__t">Google Play</span></a>
+            <a class="btn btn--ghost magnetic" href="#" data-cfg-href="appWindows" target="_blank" rel="noopener"><span class="btn__t">Для Windows</span></a>
+          </div>
+        </div>
+
+        <div class="app__visual reveal" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__screen">
+              <div class="ph-notify"><i></i><div><b>Платёж зачислен</b><span>+700 ₽ на лицевой счёт</span></div></div>
+              <div class="ph-head"><span class="ph-logo" data-logo></span><span class="ph-ava"></span></div>
+              <div class="ph-card">
+                <span>Баланс</span>
+                <b>1&nbsp;290,00&nbsp;₽</b>
+                <small>Лицевой счёт · активен</small>
+                <svg viewBox="0 0 60 60"><path d="M8 30a22 22 0 0 1 44 0"/><path d="M16 36a14 14 0 0 1 28 0"/><path d="M24 42a6 6 0 0 1 12 0"/></svg>
+              </div>
+              <div class="ph-row"><span>Тариф</span><b>ПРО.Макс · 300 Мбит/с</b></div>
+              <div class="ph-btns"><span>Пополнить</span><span>Обещанный платёж</span></div>
+              <div class="ph-news">
+                <span>Новости</span>
+                <i></i><i></i><i></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BUSINESS ============ -->
+    <section class="section" id="business">
+      <div class="container">
+        <div class="head">
+          <div>
+            <p class="sec-label reveal"><span>08</span>Бизнесу</p>
+            <h2 class="h2 split">Интернет <span class="accent">для&nbsp;бизнеса</span></h2>
+          </div>
+          <p class="lead reveal">Высокоскоростной безлимитный проводной интернет и&nbsp;телевидение для&nbsp;офисов, магазинов и&nbsp;производств.</p>
+        </div>
+
+        <div class="biz">
+          <div class="biz__main reveal">
+            <div class="biz__speed"><b>1–1000</b><span>Мбит/с</span></div>
+            <ul class="biz__list">
+              <li>Высокая скорость в&nbsp;отличие от&nbsp;модема</li>
+              <li>Стабильность и&nbsp;независимость от&nbsp;погодных условий</li>
+              <li>Техническая поддержка 24/7</li>
+              <li>Бесперебойный доступ в&nbsp;сеть Интернет</li>
+              <li>Статический IP-адрес&nbsp;— 300&nbsp;₽/мес, СКС и&nbsp;ТВ для&nbsp;бизнеса</li>
+            </ul>
+          </div>
+          <aside class="biz__side reveal" id="bizContacts"></aside>
+        </div>
+
+        <div class="clients reveal">
+          <span class="clients__label">Нам доверяют</span>
+          <div class="clients__view"><div class="clients__track" id="clients"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAYMENT ============ -->
+    <section class="section light light--top" id="pay">
+      <div class="container pay">
+        <div class="pay__body">
+          <p class="sec-label reveal"><span>09</span>Оплата</p>
+          <h2 class="h2 split">Пополнение счёта <span class="accent">за&nbsp;минуту</span></h2>
+          <p class="lead reveal">Введите номер лицевого счёта и&nbsp;сумму&nbsp;— оплата пройдёт на&nbsp;защищённой странице банка. Также пополнить счёт можно в&nbsp;личном кабинете и&nbsp;в&nbsp;приложении.</p>
+          <a class="u u--lg reveal" href="#" data-cfg-href="cabinetUrl" target="_blank" rel="noopener">Войти в&nbsp;личный кабинет ↗</a>
+        </div>
+
+        <form class="paycard reveal" id="payForm" method="POST" novalidate>
+          <div class="paycard__glow" aria-hidden="true"></div>
+          <div class="paycard__top">
+            <span class="paycard__logo" data-logo></span>
+            <div class="seg seg--sm" id="payMethod" role="tablist" aria-label="Способ оплаты">
+              <button type="button" role="tab" data-method="sbp" class="is-on" aria-selected="true">СБП</button>
+              <button type="button" role="tab" data-method="card" aria-selected="false">Картой</button>
+              <i class="seg__pill" aria-hidden="true"></i>
+            </div>
+          </div>
+          <input type="hidden" name="UTM5Command" value="preform">
+          <input type="hidden" name="PaymentType" id="payType" value="">
+          <div class="field">
+            <input id="payAcc" name="AccountID" inputmode="numeric" autocomplete="off" placeholder=" ">
+            <label for="payAcc">Лицевой счёт, не&nbsp;номер карты</label>
+          </div>
+          <div class="field">
+            <input id="paySum" name="Summa" inputmode="decimal" autocomplete="off" placeholder=" " maxlength="7">
+            <label for="paySum">Сумма платежа, ₽</label>
+          </div>
+          <div class="paycard__sums" role="group" aria-label="Быстрый выбор суммы">
+            <button type="button" data-sum="590">590</button>
+            <button type="button" data-sum="850">850</button>
+            <button type="button" data-sum="1290">1 290</button>
+            <button type="button" data-sum="2000">2 000</button>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit"><span class="btn__t">Оплатить</span></button>
+          <p class="paycard__note"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Защищённая страница банка-партнёра</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--tint light" id="faq">
+      <div class="container faq-wrap">
+        <div class="faq-wrap__head">
+          <p class="sec-label reveal"><span>10</span>Вопросы</p>
+          <h2 class="h2 split">Частые <span class="accent">вопросы</span></h2>
+          <p class="lead reveal">Не&nbsp;нашли ответ? Позвоните в&nbsp;абонентский отдел: <a class="u" href="tel:88612100700">8&nbsp;861&nbsp;2-100-700</a>.</p>
+        </div>
+        <div class="faq">
+          <details class="reveal">
+            <summary>Сколько стоит подключение?<i></i></summary>
+            <div class="faq__a"><p>Квартира в&nbsp;многоквартирном доме&nbsp;— 0&nbsp;₽. Частный дом&nbsp;— 8&nbsp;000&nbsp;₽, для&nbsp;пенсионеров по&nbsp;акции&nbsp;— 5&nbsp;000&nbsp;₽. Дополнительные работы и&nbsp;материалы оплачиваются по&nbsp;прайс-листу.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>Как оплатить услуги?<i></i></summary>
+            <div class="faq__a"><p>Онлайн через СБП или&nbsp;банковской картой по&nbsp;номеру лицевого счёта, в&nbsp;личном кабинете или&nbsp;в&nbsp;мобильном приложении.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>Пропал интернет&nbsp;— что делать?<i></i></summary>
+            <div class="faq__a"><p>Выключите роутер на&nbsp;30&nbsp;секунд и&nbsp;включите снова, проверьте баланс в&nbsp;личном кабинете. Если не&nbsp;помогло&nbsp;— позвоните в&nbsp;техподдержку <a class="u" href="tel:88612100800">8&nbsp;861&nbsp;2-100-800</a>, без выходных с&nbsp;7:00 до&nbsp;1:00.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>Какое телевидение вы&nbsp;предлагаете?<i></i></summary>
+            <div class="faq__a"><p>Интерактивное ТВ «Смотрёшка» и&nbsp;«24часаТВ»&nbsp;— от&nbsp;200 до&nbsp;300+ каналов в&nbsp;пакетах «Интернет + ТВ». В&nbsp;некоторых тарифах ТВ-приставка в&nbsp;подарок.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>Можно ли получить статический IP?<i></i></summary>
+            <div class="faq__a"><p>Да, статический IP-адрес подключается дополнительно и&nbsp;стоит 300&nbsp;₽ в&nbsp;месяц.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ORDER + CONTACTS ============ -->
+    <section class="section light light--bottom" id="contacts">
+      <div class="container" id="order">
+        <div class="head">
+          <div>
+            <p class="sec-label reveal"><span>11</span>Подключение</p>
+            <h2 class="h2 split">Оставьте <span class="accent">заявку</span></h2>
+          </div>
+          <p class="lead reveal">Менеджер перезвонит, проверит техническую возможность по&nbsp;вашему адресу и&nbsp;подберёт тариф.</p>
+        </div>
+
+        <div class="order">
+          <div class="order__panel reveal">
+            <form id="orderForm" novalidate>
+              <div class="seg seg--sm order__type" id="orderType" role="tablist" aria-label="Тип подключения">
+                <button type="button" role="tab" data-type="flat" class="is-on" aria-selected="true">Квартира</button>
+                <button type="button" role="tab" data-type="house" aria-selected="false">Частный дом</button>
+                <i class="seg__pill" aria-hidden="true"></i>
+              </div>
+              <input type="hidden" name="type" id="fType" value="Квартира">
+              <div class="form-grid">
+                <div class="field">
+                  <input id="fName" name="name" autocomplete="name" placeholder=" " maxlength="100">
+                  <label for="fName">Имя и&nbsp;отчество</label>
+                </div>
+                <div class="field">
+                  <input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder=" " maxlength="20">
+                  <label for="fPhone">Телефон</label>
+                </div>
+                <div class="field">
+                  <input id="fCity" name="city" autocomplete="address-level2" placeholder=" " maxlength="100">
+                  <label for="fCity">Населённый пункт</label>
+                </div>
+                <div class="field">
+                  <input id="fAddr" name="address" autocomplete="street-address" placeholder=" " maxlength="200">
+                  <label for="fAddr">Улица, дом, квартира</label>
+                </div>
+                <div class="field field--select">
+                  <select id="fTariff" name="tariff"></select>
+                  <label for="fTariff">Тариф или&nbsp;услуга</label>
+                </div>
+                <div class="field">
+                  <input id="fPromo" name="promocode" placeholder=" " maxlength="50">
+                  <label for="fPromo">Промокод</label>
+                </div>
+              </div>
+              <label class="check">
+                <input type="checkbox" id="fConsent" name="agreement" value="1">
+                <span class="check__box" aria-hidden="true"></span>
+                <span>Даю согласие на&nbsp;обработку персональных данных</span>
+              </label>
+              <button class="btn btn--primary" type="submit" id="orderBtn"><span class="btn__t">Отправить заявку</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></button>
+            </form>
+
+            <div class="order__done" id="orderDone" hidden>
+              <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30"/><path d="M20 33l8 8 16-17"/></svg>
+              <h3>Заявка принята</h3>
+              <p>Менеджер ProNet перезвонит вам в&nbsp;рабочее время.</p>
+              <button class="u" type="button" id="orderAgain">Отправить ещё одну</button>
+            </div>
+          </div>
+
+          <aside class="contacts reveal" id="contactsBox"></aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#top" class="footer__logo" data-logo aria-label="ProNet — наверх"></a>
+          <p>Безлимитный высокоскоростной интернет и&nbsp;интерактивное телевидение.</p>
+        </div>
+        <div class="footer__col">
+          <span class="footer__h">Абонентам</span>
+          <a class="u" href="#tariffs">Тарифы</a>
+          <a class="u" href="#pay">Оплата</a>
+          <a class="u" href="#app">Приложение</a>
+          <a class="u" href="#faq">Вопросы</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__h">Услуги</span>
+          <a class="u" href="#services">Интерактивное ТВ</a>
+          <a class="u" href="#services">Видеонаблюдение</a>
+          <a class="u" href="#services">Умный домофон</a>
+          <a class="u" href="#business">Для бизнеса</a>
+        </div>
+        <div class="footer__col" id="footerContacts"></div>
+      </div>
+      <div class="footer__big" id="footerBig" data-logo aria-hidden="true"></div>
+      <div class="footer__legal">
+        <span>© <span id="year">2026</span> <span data-cfg="legal"></span></span>
+        <span data-cfg="license"></span>
+        <span>Концепция нового сайта</span>
+        <a class="u" href="#top">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="app.js"></script>
+  <script src="scene3d.js"></script>
+</body>
+</html>
