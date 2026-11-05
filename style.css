@@ -607,7 +607,7 @@ p { margin: 0; }
 }
 .biz__speed { display: flex; align-items: baseline; gap: 14px; margin-bottom: 30px; }
 .biz__speed b { font-size: clamp(3.4rem, 7vw, 6.4rem); font-weight: 500; letter-spacing: -.06em; line-height: .9; }
-.biz__speed span { font-size: 18px; color: var(--muted); }
+.biz__speed span, .biz__speed small { font-size: 18px; color: var(--muted); }
 .biz__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
 .biz__list li { display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid rgba(255, 255, 255, .1); font-size: 16px; }
 .biz__list li::before { content: '—'; color: var(--blue-2); }
@@ -792,9 +792,8 @@ p { margin: 0; }
 .no-js .seg button.is-on { background: var(--blue); color: #fff; }
 .no-js .tl::before { background: var(--blue); border-color: var(--blue); }
 .no-js .tl__year { color: var(--text); }
-@media (max-width: 900px) {
-  .no-js .hero__static { right: auto; left: 50%; top: 70px; width: min(78vw, 46vh); translate: -50% 0; }
-  .no-js .hero__inner { padding-top: min(78vw, 46vh); }
+@media (max-width: 899.98px) {
+  .no-js .hero__static { right: auto; left: 50%; top: 64px; width: calc(var(--globe-zone) - 10px); max-width: 94vw; translate: -50% 0; }
 }
 
 /* ================= TOAST ================= */
@@ -849,16 +848,21 @@ p { margin: 0; }
   .promos { grid-template-columns: 1fr 1fr; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
+/* phones & tablets: the globe gets its own zone at the top of the hero, text starts below it */
+@media (max-width: 899.98px) {
+  .hero { --globe-zone: clamp(290px, 46vw + 140px, 500px); min-height: 0; }
+  .hero__inner { flex: none; justify-content: flex-start; padding-top: var(--globe-zone); padding-bottom: 34px; }
+}
 @media (max-width: 640px) {
   body { font-size: 15.5px; }
   .nav { height: 72px; }
   .nav .btn--sm { display: none; }
   .nav__logo { width: 116px; }
   .hero { padding-top: 72px; }
-  .hero__inner { justify-content: flex-end; padding-bottom: 36px; }
   .hero__title { font-size: clamp(2.3rem, 10.6vw, 4rem); }
-  .hero__cta { width: 100%; }
-  .hero__cta .btn { flex: 1 1 auto; }
+  .hero__row { gap: 24px; }
+  .hero__cta { width: 100%; display: grid; grid-template-columns: 1.35fr 1fr; gap: 10px; }
+  .hero__cta .btn { height: 54px; padding: 0 14px; }
   .hero__stats { grid-template-columns: repeat(3, 1fr); gap: 14px; padding-bottom: 28px; }
   .hero__scroll { display: none; }
   .globe-label { display: none; }

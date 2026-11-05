@@ -459,7 +459,6 @@
     renderer.autoClear = false;
     const globe = createGlobe(uPixel, small);
     const inner = document.getElementById('heroInner');
-    const kicker = inner && inner.querySelector('.kicker');
     const label = document.getElementById('globeLabel');
     const hint = document.getElementById('globeHint');
     if (hint && coarse) hint.querySelector('em').textContent = 'Проведите пальцем, чтобы покрутить';
@@ -473,14 +472,17 @@
         cx = w * 0.76;
         cy = vh * 0.47;
       } else {
-        const top = inner && kicker ? inner.offsetTop + kicker.offsetTop : h * 0.4;
-        const nav = 72, avail = Math.max(0, top - nav);
-        rpx = Math.max(64, Math.min(w * 0.4, (avail / 2) * 0.78));
+        // phones/tablets: the globe has its own zone above the text (.hero__inner padding-top = --globe-zone),
+        // so its size no longer depends on the screen height or the browser toolbar
+        const zoneTop = inner ? inner.offsetTop : 72;
+        const zoneH = inner ? parseFloat(getComputedStyle(inner).paddingTop) || 320 : 320;
+        rpx = Math.min(w * 0.4, zoneH * 0.36);
         cx = w / 2;
-        cy = nav + avail / 2;
+        cy = zoneTop + zoneH * 0.46;
       }
       globe.layout(w, h, cx, cy, rpx);
-      if (hint) { hint.style.left = `${cx}px`; hint.style.top = `${cy + rpx * 0.8}px`; }
+      // desktop: hint on the lower part of the globe; mobile: just under the globe, above the text
+      if (hint) { hint.style.left = `${cx}px`; hint.style.top = `${w >= 900 ? cy + rpx * 0.8 : cy + rpx + 26}px`; }
     };
 
     const resize = () => { fit(renderer, camera, hero, uPixel); placeGlobe(); };
